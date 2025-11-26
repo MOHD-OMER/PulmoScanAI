@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PulmoScan AI - TB Detection</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<div id="app">
+
+<!-- HEADER -->
+<header class="header">
+  <div class="header-content">
+
+    <!-- Brand -->
+    <div class="brand">
+      <div class="brand-logo">
+        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+          <path d="M20 8C14 8 10 12 10 18s4 10 10 10 10-4 10-10S26 8 20 8z"
+            stroke="currentColor" stroke-width="2" fill="none"/>
+          <path d="M20 14v8M16 18h8"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="brand-text">
+        <h1>PulmoScan AI</h1>
+        <p class="tagline">Clinical-Grade TB Detection</p>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#how" class="nav-link">How It Works</a>
+      <a href="#features" class="nav-link">Features</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <!-- Header Buttons -->
+    <div class="header-actions">
+      <button id="downloadReportBtn" class="btn btn-secondary">
+        Download Report
+      </button>
+
+      <button id="clearAllBtn" class="btn btn-outline">
+        Clear All
+      </button>
+    </div>
+
+  </div>
+</header>
+
+<!-- MAIN -->
+<main class="container">
+
+<!-- PAGE HEADER -->
+<section id="home" class="page-header">
+  <h2>Chest X-Ray Analysis</h2>
+  <p class="page-subtitle">Upload and analyze chest X-rays for TB detection</p>
+</section>
+
+<!-- MAIN GRID LAYOUT -->
+<div class="main-grid">
+
+  <!-- MAIN CONTENT -->
+  <section class="results-section">
+    <!-- PRIMARY X-RAY SCAN CARD -->
+    <div class="card upload-card">
+
+      <div class="card-header">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+          <circle cx="8.5" cy="8.5" r="1.5"/>
+          <polyline points="21 15 16 10 5 21"/>
+        </svg>
+        <h3>Upload Chest X-Ray</h3>
+      </div>
+
+      <div class="upload-zone" id="uploadZone1">
+        <input id="fileInput1" type="file" class="file-input" accept="image/jpeg,image/jpg,image/png" />
+
+        <div id="preview-fileInput1" class="preview-container">
+          <div class="upload-placeholder">
+            <svg width="64" height="64" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24">
+              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+              <polyline points="17 8 12 3 7 8"/>
+              <line x1="12" y1="3" x2="12" y2="15"/>
+            </svg>
+            <p class="upload-text">Click to upload X-ray image</p>
+            <p class="upload-hint">PNG, JPG up to 10MB</p>
+          </div>
+        </div>
+      </div>
+
+      <button id="analyzeBtn1" class="btn btn-primary btn-full" disabled>
+        Analyze X-Ray Scan
+      </button>
+    </div>
+
+    <!-- RESULTS FOR PRIMARY SCAN -->
+    <div id="result1" class="result-box"></div>
+
+    <!-- DISCLAIMER -->
+    <div class="disclaimer">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <div>
+        <strong>Medical Disclaimer:</strong>
+        This AI tool assists healthcare professionals and is not a replacement for clinical diagnosis. 
+        Always consult with qualified medical professionals for diagnosis and treatment decisions.
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- EXTRA SECTIONS -->
+<section id="how" class="info-section">
+  <h2>How It Works</h2>
+  <p>PulmoScan AI uses an advanced deep-learning TB detection model trained on thousands of X-rays from diverse populations.</p>
+  
+  <div style="margin-top: 2rem;">
+    <h3>Upload Guidelines</h3>
+    <div class="card info-card" style="max-width: 600px; margin: 1rem 0;">
+      <ul class="guidelines-list">
+        <li>✓ Upload clear PA/AP chest X-ray images</li>
+        <li>✓ Ensure no blur or artifacts in the image</li>
+        <li>✓ JPG, JPEG or PNG formats accepted</li>
+        <li>✓ Maximum file size: 10MB</li>
+        <li>✓ AI analysis typically takes 10-30 seconds</li>
+        <li>✓ For best results, use high-quality images</li>
+        <li>✓ Consult healthcare professional for diagnosis</li>
+      </ul>
+    </div>
+  </div>
+  
+  <div style="margin-top: 2rem;">
+    <p><strong>Process:</strong></p>
+    <ol style="margin-left: 1.5rem; margin-top: 0.5rem;">
+      <li>Upload chest X-ray image (PA/AP view)</li>
+      <li>AI analyzes image patterns and features</li>
+      <li>Get instant results with confidence score</li>
+      <li>Review heatmap visualization of findings</li>
+      <li>Download comprehensive PDF report</li>
+    </ol>
+  </div>
+</section>
+
+<section id="features" class="info-section">
+  <h2>Features</h2>
+  <ul style="margin-left: 1.5rem; margin-top: 1rem;">
+    <li>High clinical-grade accuracy (98.2% sensitivity)</li>
+    <li>AI heatmap visualization for interpretability</li>
+    <li>Fast real-time inference (&lt; 30 seconds)</li>
+    <li>Downloadable medical PDF report</li>
+    <li>Secure and confidential processing</li>
+    <li>HIPAA compliant data handling</li>
+  </ul>
+</section>
+
+<section id="contact" class="info-section">
+  <h2>Contact Us</h2>
+  <p><strong>Email:</strong> support@pulmoscan.ai</p>
+  <p><strong>Medical inquiries:</strong> medical@pulmoscan.ai</p>
+  <p><strong>Response time:</strong> 24-48 hours</p>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <div>
+      <p class="footer-brand">PulmoScan AI</p>
+      <p class="footer-text">Advanced Tuberculosis Detection</p>
+    </div>
+    <div class="footer-disclaimer">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <circle cx="12" cy="12" r="10"/>
+        <line x1="12" y1="8" x2="12" y2="12"/>
+        <line x1="12" y1="16" x2="12.01" y2="16"/>
+      </svg>
+      <span>AI-assisted tool. Not a replacement for professional medical advice.</span>
+    </div>
+  </div>
+</footer>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>

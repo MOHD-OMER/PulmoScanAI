@@ -1,0 +1,30 @@
+# Python cache
+__pycache__/
+*.pyc
+
+# Ignore datasets and heavy folders
+data/
+logs/
+reports/
+heatmaps/
+example_inputs/
+static/images/uploaded_*
+static/images/*.jpg
+static/images/*.jpeg
+
+# Ignore unneeded saved models
+saved_models/tbnet_model_final.pth
+
+# Ignore training scripts
+pulmoscan/training/
+pulmoscan/scripts/
+
+# Ignore docs
+docs/
+
+# Ignore tests (you said yes)
+tests/
+
+# Ignore environment & local files
+.DS_Store
+.env
