@@ -1,15 +1,12 @@
 fastapi
 uvicorn
-pillow
-opencv-python-headless
+torch==2.2.0+cpu
+torchvision==0.17.0+cpu
+opencv-python
 numpy
-pandas
-matplotlib
-scikit-learn
-reportlab
 python-multipart
-
-# CPU-only PyTorch (works on Render Free)
-torch==2.2.2+cpu
-torchvision==0.17.2+cpu
--f https://download.pytorch.org/whl/cpu
+reportlab
+matplotlib
+pillow
+scikit-learn
+pydantic
