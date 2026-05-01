@@ -648,16 +648,6 @@ See also the list of [contributors](https://github.com/yourusername/PulmoScanAI/
 - **Response Time**: 24-48 hours
 
 ---
-
-## ⭐ Star History
-
-If you find this project helpful, please consider giving it a star! ⭐
-
-[![Star History Chart](https://api.star-history.com/svg?repos=MOHD-OMER/PulmoScanAI&type=Date)](https://star-history.com/#MOHD-OMER/PulmoScanAI&Date)
-
----
-
-
 <div align="center">
   <strong>Built with ❤️ for better healthcare</strong>
   <br>
